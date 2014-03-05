@@ -46,4 +46,8 @@ $app = require_once __DIR__.'/../bootstrap/start.php';
 |
 */
 
-$app->run();
+try {
+    $app->run();
+} catch (\Exception $e) {
+    var_dump($e);
+}
